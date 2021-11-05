@@ -8,18 +8,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import mean_absolute_error
 import pandas as pd
 
-os.system('CLS')
-# iris = datasets.load_iris()
-# digits = datasets.load_digits()
 
-# _, axes = plt.subplots(nrows=1,ncols=4,figsize=(10,3))
-# for ax, image, label in zip(axes,digits.images,digits.target):
-#     ax.set_axis_off()
-#     ax.imshow(image,cmap=plt.cm.gray_r, interpolation = "nearest")
-#     ax.set_title("Training: %i" % label)
-
-#melbourne_file_path = 'C:/Users/riacoe/Desktop/ML playing/melb_data.csv'
-#melbourne_file_path = 'C:\Users\riacoe\Desktop\ML playing\melb_data.csv'
 melbourne_data = pd.read_csv('melb_data.csv')
 
 melbourne_data.describe()
@@ -43,3 +32,4 @@ print(melbourne_model.predict(X.head()))
 predicted_home_prices = melbourne_model.predict(X)
 MAE = mean_absolute_error(y,predicted_home_prices)
 print(MAE)
+
